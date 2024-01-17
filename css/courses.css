@@ -1,0 +1,54 @@
+/* courses css */
+.single-course {
+  width: 100%;
+  background: var(--clr-white);
+  height: 100%;
+  box-shadow: var(--box-shodow-dark);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+.single-course .img-container {
+  aspect-ratio: 355/250;
+  overflow: hidden;
+}
+.single-course .img-container img {
+  border-top-right-radius: var(--radius);
+  border-top-left-radius: var(--radius);
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.single-course .img-container img:hover {
+  transform: scaleY(1.5);
+  transform: translateY(3px);
+  transform: rotatez(5deg);
+}
+.single-course .course-title {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: var(--clr-primary-light);
+  padding-bottom: 30px;
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.fetured-courses {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 30px;
+  row-gap: 20px;
+}
+@media screen and (min-width: 766px) {
+  .fetured-courses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 996px) {
+  .fetured-courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
